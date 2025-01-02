@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>HEADER</title>
+    <link rel="stylesheet" href="../../static/css/public/header.css">
+</head>
+<body>
+    <header th:fragment="header" id="main-header">
+        <a href="/" class="main-header-logo">
+            <img src="../../static/images/logo/header_logo.png" width="200" alt="메인로고">
+        </a>
+
+        <ul class="main-menu-ul">
+            <li th:each="category: ${categories}">
+                <a th:href="@{|/product?categoryNo=${category.no}|}" th:text="${category.name}">ALL</a>
+                <ul class="header-child-menu" th:if="${category.children}">
+                    <li th:each="childCategory: ${category.children}">
+                        <a th:href="@{|/product?categoryNo=${childCategory.no}|}" th:text="${childCategory.name}">ALL</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="">COMMUNITY</a>
+                <ul class="header-child-menu">
+                    <li><a href="">NOTICE</a></li>
+                    <li><a href="">REVIWE</a></li>
+                    <li><a href="">Q&A</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="/styles">STYLES</a>
+            </li>
+        </ul>
+
+        <section>
+            <nav>
+                <ul class="header-sub-menu">
+                    <li>
+                        <a sec:authorize="not authenticated" href="/user/login">
+                            <i class="bi bi-person"></i>
+                        </a>
+                        <form sec:authorize="authenticated" name="logout-form" th:action="@{/user/logout}" method="post">
+                            <button><i class="bi bi-door-open"></i></button>
+                        </form>
+                    </li>
+                    <th:block sec:authorize="authenticated">
+                        <li>
+                            <i class="bi bi-cart"></i>
+                            <ul class="header-child-menu">
+                                <li><a href="">마이페이지</a></li>
+                                <li><a href="/user/cart">장바구니</a></li>
+                                <li><a href="">주문이력</a></li>
+                            </ul>
+                        </li>
+                    </th:block>
+                    <li><a href=""><i class="bi bi-search"></i></a></li>
+                </ul>
+            </nav>
+        </section>
+
+    </header>
+</body>
+</html>
