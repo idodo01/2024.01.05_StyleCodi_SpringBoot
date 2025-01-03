@@ -75,8 +75,9 @@ public class MainController {
         model.addAttribute("categories", categories);
         return "main/styles-store";
     }
+  
 
-    // 스타일 스냅 - 스토어
+    // 스타일 스냅 - 내 옷장
     @GetMapping("/styles-my")
     public String get_styles_my(
             @RequestParam(defaultValue = "1") Integer categoryNo,

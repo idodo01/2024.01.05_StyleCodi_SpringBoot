@@ -8,59 +8,79 @@
 <head>
     <meta charset="UTF-8">
     <title>카테고리 | KOREA STORE</title>
-    <link rel="stylesheet" href="../../static/css/main/styles-my.css">
-    <script src="../../static/js/main/styles-my.js" defer></script>
+    <link rel="stylesheet" href="../../static/css/main/styles-store2.css">
+    <script src="../../static/js/main/styles-store2.js" defer></script>
 </head>
 <body>
 
 <main layout:fragment="main">
     <h1>StyleSnap</h1>
     <div class="button-container">
-        <button type="button" id="order-select-button"><a href="/styles">시작하기</a></button>
-        <button type="button" id="order-all-button"><a href="/styles-store">스토어 상품으로</a></button>
-        <button type="button" id=""><a href="/styles-my">내 옷장으로</a></button>
+        <a href="/styles"><div class="tab" id="order-select-button">시작하기</div ></a>
+        <a href="/styles-store"><div class="tab" id="order-all-button">스토어 상품으로</div></a>
+        <a href="/styles-my"><div class="tab" id="">내 옷장으로</div></a>
     </div>
     <hr>
-    <!-- 탭 -->
-    <div class="tab-container">
-        <div class="tab active" data-tab="topTab">상의 선택</div>
-        <div class="tab" data-tab="bottomTab">하의 선택</div>
-    </div>
 
-    <!-- 상의 업로드 -->
-    <div class="content active" id="topTab">
-        <h2>👕 상의 업로드</h2>
-        <div class="upload-grid" id="topGrid">
-            <!-- 상의 업로드 박스 생성 -->
+    <div class="all-section">
+        <!-- 왼쪽 섹션 -->
+        <div class="left-section">
+            <div class="upload-container">
+                <div class="upload-item">
+                    <h2>👕 상의</h2>
+                    <div id="topPreview" class="preview-box" onclick="document.getElementById('topInput').click();">
+                        <span>이미지 첨부</span>
+                    </div>
+                    <input id="topInput" type="file" accept="image/*" style="display: none;" onchange="previewImage(event, 'topPreview')">
+                </div>
+                <div class="upload-item">
+                    <h2>👖 하의</h2>
+                    <div id="bottomPreview" class="preview-box" onclick="document.getElementById('bottomInput').click();">
+                        <span>이미지 첨부</span>
+                    </div>
+                    <input id="bottomInput" type="file" accept="image/*" style="display: none;" onchange="previewImage(event, 'bottomPreview')">
+                </div>
+                <div class="upload-item">
+                    <h2>🧥 겉옷</h2>
+                    <div id="outerPreview" class="preview-box" onclick="document.getElementById('outerInput').click();">
+                        <span>이미지 첨부</span>
+                    </div>
+                    <input id="outerInput" type="file" accept="image/*" style="display: none;" onchange="previewImage(event, 'outerPreview')">
+                </div>
+                <div class="upload-item">
+                    <h2>👜 가방</h2>
+                    <div id="bagPreview" class="preview-box" onclick="document.getElementById('bagInput').click();">
+                        <span>이미지 첨부</span>
+                    </div>
+                    <input id="bagInput" type="file" accept="image/*" style="display: none;" onchange="previewImage(event, 'bagPreview')">
+                </div>
+                <div class="upload-item">
+                    <h2>👢 신발</h2>
+                    <div id="shoesPreview" class="preview-box" onclick="document.getElementById('shoesInput').click();">
+                        <span>이미지 첨부</span>
+                    </div>
+                    <input id="shoesInput" type="file" accept="image/*" style="display: none;" onchange="previewImage(event, 'shoesPreview')">
+                </div>
+            </div>
+
+            <button id="combineButton">👕 + 👖 조합하기</button>
+
+        </div>
+
+        <!-- 오른쪽 섹션 -->
+        <div class="right-section">
+            <div class="combined" id="combinedResult">
+                <img src="../../static/images/styles/example.jpg" alt="초기 레이아웃 이미지" style="max-width: 100%;">
+            </div>
+
+            <div id="downloadButtonContainer" style="display: none;">
+                <a id="downloadLink" href="#" download="combined-image.png">
+                    <button>조합 이미지 다운로드</button>
+                </a>
+            </div>
         </div>
     </div>
-
-    <!-- 하의 업로드 -->
-    <div class="content" id="bottomTab">
-        <h2>👖 하의 업로드</h2>
-        <div class="upload-grid" id="bottomGrid">
-            <!-- 하의 업로드 박스 생성 -->
-        </div>
-    </div>
-
-    <!-- 조합하기 버튼 -->
-    <button id="combineButton">👕 + 👖 조합하기</button>
-    </div>
-
-    <!-- 오른쪽 섹션 -->
-    <div class="right-section">
-        <h2>✨ 조합 결과 ✨</h2>
-        <div class="combined" id="combinedResult">
-            <p>상의와 하의를 업로드하고 조합 버튼을 눌러보세요!</p>
-        </div>
-
-        <!-- 다운로드 버튼 추가 -->
-        <div id="downloadButtonContainer" style="display: none;">
-            <a id="downloadLink" href="#" download="combined-image.png">
-                <button>이미지 다운로드</button>
-            </a>
-        </div>
-
 </main>
+
 </body>
 </html>
