@@ -35,31 +35,32 @@
             </li>
 
             <li>
-                <a href="/styles">STYLES</a>
+                <a href="/styles">STYLES SNAP</a>
             </li>
         </ul>
 
         <section>
             <nav>
                 <ul class="header-sub-menu">
+
+                    <a sec:authorize="not authenticated" href="/user/login">
+                        <i class="bi bi-door-open"></i>
+                    </a>
+                    <form sec:authorize="authenticated" name="logout-form" th:action="@{/user/logout}" method="post">
+                        <button><i class="bi bi-door-open"></i></button>
+                    </form>
+
+
                     <li>
-                        <a sec:authorize="not authenticated" href="/user/login">
-                            <i class="bi bi-person"></i>
-                        </a>
-                        <form sec:authorize="authenticated" name="logout-form" th:action="@{/user/logout}" method="post">
-                            <button><i class="bi bi-door-open"></i></button>
-                        </form>
+                        <i class="bi bi-person"></i>
+                        <ul class="header-child-menu">
+                            <li><a href="/user/info">마이페이지</a></li>
+                            <li><a href="">내주문내역</a></li>
+                            <li><a href="/user/cart">장바구니</a></li>
+                        </ul>
                     </li>
-                    <th:block sec:authorize="authenticated">
-                        <li>
-                            <i class="bi bi-cart"></i>
-                            <ul class="header-child-menu">
-                                <li><a href="">마이페이지</a></li>
-                                <li><a href="/user/cart">장바구니</a></li>
-                                <li><a href="">주문이력</a></li>
-                            </ul>
-                        </li>
-                    </th:block>
+
+                    <li><a href="/user/cart"><i class="bi bi-cart"></i></a></li>
                     <li><a href=""><i class="bi bi-search"></i></a></li>
                 </ul>
             </nav>

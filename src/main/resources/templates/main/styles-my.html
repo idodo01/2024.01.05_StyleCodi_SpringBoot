@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layout/main-layout}"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>카테고리 | KOREA STORE</title>
+    <link rel="stylesheet" href="../../static/css/main/styles-my.css">
+    <script src="../../static/js/main/styles-my.js" defer></script>
+</head>
+<body>
+
+<main layout:fragment="main">
+    <h1>StyleSnap</h1>
+    <div class="button-container">
+        <button type="button" id="order-select-button"><a href="/styles">시작하기</a></button>
+        <button type="button" id="order-all-button"><a href="/styles-store">스토어 상품으로</a></button>
+        <button type="button" id=""><a href="/styles-my">내 옷장으로</a></button>
+    </div>
+    <hr>
+    <!-- 탭 -->
+    <div class="tab-container">
+        <div class="tab active" data-tab="topTab">상의 선택</div>
+        <div class="tab" data-tab="bottomTab">하의 선택</div>
+    </div>
+
+    <!-- 상의 업로드 -->
+    <div class="content active" id="topTab">
+        <h2>👕 상의 업로드</h2>
+        <div class="upload-grid" id="topGrid">
+            <!-- 상의 업로드 박스 생성 -->
+        </div>
+    </div>
+
+    <!-- 하의 업로드 -->
+    <div class="content" id="bottomTab">
+        <h2>👖 하의 업로드</h2>
+        <div class="upload-grid" id="bottomGrid">
+            <!-- 하의 업로드 박스 생성 -->
+        </div>
+    </div>
+
+    <!-- 조합하기 버튼 -->
+    <button id="combineButton">👕 + 👖 조합하기</button>
+    </div>
+
+    <!-- 오른쪽 섹션 -->
+    <div class="right-section">
+        <h2>✨ 조합 결과 ✨</h2>
+        <div class="combined" id="combinedResult">
+            <p>상의와 하의를 업로드하고 조합 버튼을 눌러보세요!</p>
+        </div>
+
+        <!-- 다운로드 버튼 추가 -->
+        <div id="downloadButtonContainer" style="display: none;">
+            <a id="downloadLink" href="#" download="combined-image.png">
+                <button>이미지 다운로드</button>
+            </a>
+        </div>
+
+</main>
+</body>
+</html>

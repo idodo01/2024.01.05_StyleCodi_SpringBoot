@@ -50,7 +50,7 @@ public class MainController {
 
     // 스타일 스냅
     @GetMapping("/styles")
-    public String get_stylesnap(
+    public String get_styles(
             @RequestParam(defaultValue = "1") Integer categoryNo,
             String sort,
             Model model
@@ -62,4 +62,31 @@ public class MainController {
         return "main/styles";
     }
 
+    // 스타일 스냅 - 스토어
+    @GetMapping("/styles-store")
+    public String get_styles_store(
+            @RequestParam(defaultValue = "1") Integer categoryNo,
+            String sort,
+            Model model
+    ){
+        List<ProductDTO> products = productService.get_products(categoryNo, sort);
+        List<CategoryDTO> categories = productService.get_categories();
+        model.addAttribute("products", products);
+        model.addAttribute("categories", categories);
+        return "main/styles-store";
+    }
+
+    // 스타일 스냅 - 스토어
+    @GetMapping("/styles-my")
+    public String get_styles_my(
+            @RequestParam(defaultValue = "1") Integer categoryNo,
+            String sort,
+            Model model
+    ){
+        List<ProductDTO> products = productService.get_products(categoryNo, sort);
+        List<CategoryDTO> categories = productService.get_categories();
+        model.addAttribute("products", products);
+        model.addAttribute("categories", categories);
+        return "main/styles-my";
+    }
 }

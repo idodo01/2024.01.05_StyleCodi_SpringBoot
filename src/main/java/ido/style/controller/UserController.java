@@ -60,27 +60,8 @@ public class UserController {
             log.error(bindingResult.getAllErrors());
             return "user/join";
         }
-        //// 휴대폰 인증 확인 여부를 판단한다
-//        String impUid = (String)session.getAttribute("impUid");
-//        if(Objects.isNull(impUid)){
-//            return "user/join"; // 가입을 못하게. 실패라면 회원가입 화면으로.
-//        }
-//        // 인증을 안하고 왔으면 혹은, 인증을 실제로 포트원에서 확인했을때 인증이 안되었다면
-//        String ci = portOneService.tel_authentication(impUid, userDTO.getTel());
-//        if(Objects.isNull(ci)){
-//            return "user/join"; // 가입을 못하게. 실패라면 회원가입 화면으로.
-//        }
-//        userDTO.setCi(ci); // 받아온 ci를 유저에게 설정한다
 
         userDTO.setCi("TEST_CI2");
-
-        //// 이메일 인증번호 확인 여부를 판단한다
-        // 인증된 이메일을 가져온다
-//        String certCompleteEmail = (String) session.getAttribute("emailAuth");
-//        // 인증을 안하고 join버튼을 눌렀거나 (null), 인증한 이메일과 가입하려고 하는 이메일이 다르다면
-//        if(Objects.isNull(certCompleteEmail) || !userDTO.getEmail().equals(certCompleteEmail)){
-//            return "user/join"; // 가입을 못하게. 실패라면 회원가입 화면으로.
-//        }
 
         boolean joinResult = userService.join_user(userDTO);
         // 가입 성공이면 login 화면으로, 실패라면 회원가입 화면으로.
@@ -101,6 +82,17 @@ public class UserController {
         }
 
         model.addAttribute("totalPrice", totalPrice);
+    }
+
+    /************************ 유저 정보 ***************************/
+    @GetMapping("/info")
+    public void get_user_info(
+            @AuthenticationPrincipal UserDTO user,
+            Model model
+    ){
+//        List<OrderDTO> orders = orderService.get_orders_by_user(user.getId());
+////        log.info("조회된 ORDER: " + orders);
+//        model.addAttribute("orders", orders);
     }
 
 }
