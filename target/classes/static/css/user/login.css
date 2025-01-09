@@ -1,10 +1,10 @@
 @import "../public/public.css";
 
-main{
+.login-section {
     width: 500px;
     margin: 0 auto;
 }
-h1{
+.login-section h1{
     text-align: center;
     margin: 40px 0;
     font-size: var(--font-size-xxx-large);

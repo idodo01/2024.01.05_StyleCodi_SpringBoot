@@ -1,33 +1,33 @@
 @import "../public/public.css";
 
-main{
+.upload-section {
     width: 60%;
     margin: 0 auto;
     padding: 40px 0;
 }
-h1{
+.upload-section h1{
     text-align: center;
     font-size: var(--font-size-xxx-large);
     margin-bottom: 40px;
 }
-form{
+.upload-section form{
     padding: 20px 40px;
     background-color: var(--Summer-spring-decoration-design-elements-5-rgba);
     border-radius: 8px;
 }
-form > section{
+.upload-section form > section{
     display: flex;
     align-items: center;
     font-size: var(--font-size-normal);
     padding: 10px 0;
 }
-form > section > b{
+.upload-section form > section > b{
     flex-basis: 180px;
 }
-form > section > label{
+.upload-section form > section > label{
     flex: 1;
 }
-form > section input{
+.upload-section form > section input{
     width: 100%;
     padding: 2px 5px;
     font-size: var(--font-size-small);
@@ -101,7 +101,7 @@ form > section input{
     }
 }
 /**********************************************************************/
-form .item-images-section > b > button{
+.upload-section form .item-images-section > b > button{
     font-size: var(--font-size-normal);
     color: black;
     background-color: white;
@@ -113,11 +113,11 @@ form .item-images-section > b > button{
         opacity: 0.8;
     }
 }
-form .item-images-section li{
+.upload-section form .item-images-section li{
     display: flex;
     align-items: center;
 }
-form .item-images-section li > button{
+.upload-section form .item-images-section li > button{
     width: 30px;
     font-size: var(--font-size-normal);
     color: var(--Pasteles-5-rgba);
@@ -131,7 +131,7 @@ form .item-images-section li > button{
     }
 }
 /***************************************************/
-form textarea{
+.upload-section form textarea{
     width: 100%;
     height: 300px;
     resize: none;
@@ -139,11 +139,11 @@ form textarea{
     font-size: var(--font-size-small);
 }
 /***************************************************/
-form > .item-upload-button-section{
+.upload-section form > .item-upload-button-section{
     display: block;
     text-align: center;
 }
-form > .item-upload-button-section > button{
+.upload-section form > .item-upload-button-section > button{
     padding: 10px 30px;
     cursor: pointer;
     margin: 0 4px;
@@ -154,10 +154,10 @@ form > .item-upload-button-section > button{
         opacity: 0.8;
     }
 }
-form > .item-upload-button-section > button[type=button]{
+.upload-section form > .item-upload-button-section > button[type=button]{
     background-color: var(--Spring-WT-5-rgba);
 }
-form > .item-upload-button-section > button[type=submit]{
+.upload-section form > .item-upload-button-section > button[type=submit]{
     background-color: var(--Spring-WT-1-rgba);
 }
 

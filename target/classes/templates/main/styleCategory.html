@@ -28,11 +28,6 @@
                     <a href="/styleProduct?sort=name">이름순</a>
                 </li>
                 <li>
-                    <a href="/styleProduct?sort=low-price">낮은 가격순</a>
-                </li>
-                <li>
-                    <a href="/styleProduct?sort=high-price">높은 가격순</a>
-                </li>
             </ul>
         </div>
         <section>
@@ -40,7 +35,7 @@
                 <a class="image-container" th:href="@{|/styleProduct/${styleProduct.no}|}">
                     <img th:src="@{|/image/${styleProduct.images[0].no}|}" src="https://jp.cookierunstore.com/web/product/medium/202312/27a96ac44b5d30888302cb8673663719.jpg" alt="">
                 </a>
-                <b class="title" th:text="${styleProduct.name}">クッキーラン霊魂石キーホルダー第4弾</b>
+                <b class="title" th:text="${styleProduct.name}">스타일 이름</b>
             </div>
         </section>
         <ol>
@@ -50,7 +45,9 @@
             <li><a href="#">3</a></li>
             <li><a href="#"><i class="bi bi-caret-right-fill"></i></a></li>
         </ol>
+        <a href="/user/upload">글쓰기</a>
     </section>
+
 
 </main>
 </body>

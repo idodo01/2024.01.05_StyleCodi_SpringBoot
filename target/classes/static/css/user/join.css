@@ -1,33 +1,33 @@
 @import "../public/public.css";
 
-main{
+.join-section {
     width: 700px;
     margin: 0 auto;
 }
-h1{
+.join-section h1{
     text-align: center;
     font-size: var(--font-size-xx-large);
     margin: 40px 0;
 }
-h2{
+.join-section h2{
     margin: 10px 0;
 }
 /****************************************/
-form > section{
+.join-section form > section{
     margin-bottom: 40px;
 }
-form > section > div{
+.join-section form > section > div{
     display: flex;
     align-items: center;
     margin: 5px 0;
 }
-form > section > div > i{
+.join-section form > section > div > i{
     font-size: var(--font-size-large);
     margin-right: 10px;
     flex-basis: 35px;
     text-align: center;
 }
-form input{
+.join-section form input{
     font-size: var(--font-size-small);
     width: 100%;
     padding: 5px 10px;

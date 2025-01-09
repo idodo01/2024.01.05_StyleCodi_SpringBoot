@@ -1,12 +1,7 @@
 package ido.style.controller;
 
-import ido.style.dto.CartDTO;
-import ido.style.dto.ProductDTO;
-import ido.style.dto.StyleProductDTO;
-import ido.style.dto.UserDTO;
-import ido.style.service.OrderService;
-import ido.style.service.PortOneService;
-import ido.style.service.UserService;
+import ido.style.dto.*;
+import ido.style.service.*;
 import jakarta.servlet.http.HttpSession;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -31,23 +26,44 @@ public class UserController {
     private static final Logger log = LogManager.getLogger(UserController.class);
     @Autowired private UserService userService;
     @Autowired private OrderService orderService;
-    @Autowired private PortOneService portOneService;
-    
+
+    @Autowired
+    private ProductService productService;
+    @Autowired
+    private StyleProductService styleProductService;
+
+
     @GetMapping("/login")
-    public String get_login(Authentication authentication) {
+    public String get_login(
+            Authentication authentication,
+            Model model
+    ) {
         // 이미 로그인이 되어 있는 상태이다
         if(Objects.nonNull(authentication)){
             return "redirect:/";
         }
+
+        List<StyleCategoryDTO> styleCategories = styleProductService.get_categories();
+        List<CategoryDTO> categories = productService.get_categories();
+        model.addAttribute("styleCategories", styleCategories);
+        model.addAttribute("categories", categories);
         return "user/login";
     }
     /************************************************/
     @GetMapping("/join")
-    public String get_join(@ModelAttribute UserDTO userDTO, Authentication authentication) {
+    public String get_join(
+            @ModelAttribute UserDTO userDTO,
+            Authentication authentication,
+            Model model
+    ) {
         // 이미 로그인이 되어 있는 상태이다
         if(Objects.nonNull(authentication)){
             return "redirect:/";
         }
+        List<StyleCategoryDTO> styleCategories = styleProductService.get_categories();
+        List<CategoryDTO> categories = productService.get_categories();
+        model.addAttribute("styleCategories", styleCategories);
+        model.addAttribute("categories", categories);
         return "user/join";
     }
 
@@ -83,6 +99,11 @@ public class UserController {
             model.addAttribute("carts", carts);
         }
 
+        List<StyleCategoryDTO> styleCategories = styleProductService.get_categories();
+        List<CategoryDTO> categories = productService.get_categories();
+        model.addAttribute("styleCategories", styleCategories);
+        model.addAttribute("categories", categories);
+
         model.addAttribute("totalPrice", totalPrice);
     }
 
@@ -92,19 +113,29 @@ public class UserController {
             @AuthenticationPrincipal UserDTO user,
             Model model
     ){
-//        List<OrderDTO> orders = orderService.get_orders_by_user(user.getId());
-////        log.info("조회된 ORDER: " + orders);
-//        model.addAttribute("orders", orders);
+       List<StyleCategoryDTO> styleCategories = styleProductService.get_categories();
+        List<CategoryDTO> categories = productService.get_categories();
+        model.addAttribute("styleCategories", styleCategories);
+        model.addAttribute("categories", categories);
     }
 
     /******************************************************************/
     @GetMapping("/upload")
-    public void get_style_upload(){}
+    public void get_style_upload( Model model){
+        List<StyleCategoryDTO> styleCategories = styleProductService.get_categories();
+        List<CategoryDTO> categories = productService.get_categories();
+        model.addAttribute("styleCategories", styleCategories);
+        model.addAttribute("categories", categories);
+    }
 
     @PostMapping("/upload")
-    public String post_style_upload(StyleProductDTO styleProductDTO){
+    public String post_style_upload(
+            StyleProductDTO styleProductDTO
+    )
+    {
         userService.add_style_product(styleProductDTO);
         return "redirect:/user/upload";
     }
+
 
 }
