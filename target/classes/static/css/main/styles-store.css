@@ -1,10 +1,10 @@
 @import "../public/public.css";
 
-main{
+.styles-store-section {
     width: 1400px;
     margin: 180px auto;
 }
-main > h1{
+.styles-store-section > h1{
     margin: 40px;
     text-align: center;
 }
@@ -59,37 +59,37 @@ main > h1{
 }
 
 /******************************************/
-main > header{
+.styles-store-section > header{
     display: flex;
     justify-content: space-between;
     font-size: var(--font-size-x-small);
     margin-bottom: 25px;
     color: var(--Dark-gray-textured-background---4-rgba);
 }
-main > header li{
+.styles-store-section > header li{
     display: inline-block;
     list-style: none;
 }
-main > header li:not(:last-child)::after{
+.styles-store-section > header li:not(:last-child)::after{
     content: "|";
     margin: 0 10px;
 }
-main > header a{
+.styles-store-section > header a{
     text-decoration: none;
     color: var(--Dark-gray-textured-background---4-rgba);
 }
 /*****************************************************/
-main > section{
+.styles-store-section > section{
     display: grid;
     grid-gap: 5px 30px;
     grid-template-columns: repeat(4, 1fr);
 }
-main > section .item{
+.styles-store-section > section .item{
     display: inline-flex;
     text-align: center;
     flex-direction: column;
 }
-main > section .image-container{
+.styles-store-section > section .image-container{
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 10px;
@@ -97,34 +97,34 @@ main > section .image-container{
         transform: scale(120%);
     }
 }
-main > section .image-container > img{
+.styles-store-section > section .image-container > img{
     width: 100%;
     height: 100%;
     transition-duration: 0.2s;
     object-fit: contain;
 }
-main > section .title{
+.styles-store-section > section .title{
     text-decoration: none;
     color: var(--Dark-gray-textured-background---5-rgba);
     font-family: Medium;
     font-size: var(--font-size-xx-small);
     margin-bottom: 8px;
 }
-main > section .price{
+.styles-store-section > section .price{
     color: var(--Pasteles-5-rgba);
     font-family: Medium;
     font-size: var(--font-size-xx-small);
 }
 /******************************************************/
-main > ol{
+.styles-store-section > ol{
     margin: 50px 0;
     display: flex;
     justify-content: center;
 }
-main > ol > li {
+.styles-store-section > ol > li {
     margin: 0 8px;
 }
-main > ol a{
+.styles-store-section > ol a{
     color: black;
     font-size: var(--font-size-x-small);
 }

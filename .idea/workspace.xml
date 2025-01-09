@@ -5,23 +5,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d6978e8-a239-4e31-a9d3-edbc62bc5338" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ido/style/dto/StyleCategoryDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ido/style/dto/StyleProductDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ido/style/dto/StyleProductImageDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ido/style/mapper/StyleProductMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ido/style/service/StyleProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/style-product-mapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/main/style-category.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/main/style-product.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/main/style-category.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/main/style-product.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/main/styleCategory.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/main/styleProduct.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/main/styles-map.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/394b110e-8b60-4ee3-b0d4-fb62bf5017e5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/394b110e-8b60-4ee3-b0d4-fb62bf5017e5.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ido/style/StyleSnapApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ido/style/StyleCodiApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ido/style/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ido/style/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main/styles-my.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/main/styles-my.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/configuration/configuration.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/configuration/configuration.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main/category.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/main/category.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/main/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main/product.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/main/product.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main/styles-my.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/main/styles-map.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main/styles-store.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/main/styles-store.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/main/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/main/styles-my.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/main/styles-my.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main/styles-my.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main/styles-my.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main/category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main/product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main/styles-my.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main/styles-store.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main/styles-store.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main/styles.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main/styles.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/main/styles-my.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/main/styles-my.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/public/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/public/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ido/style/StyleSnapApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ido/style/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ido/style/controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/configuration/configuration.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/configuration/configuration.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/main/category.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/main/category.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/main/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/main/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/main/product.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/main/product.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/main/styles-my.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/css/main/styles-store.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/main/styles-store.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/css/main/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/main/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/main/styles-my.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/main/styles-my.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/main/styles-my.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main/styles-my.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main/category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main/product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main/styles-my.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/main/styles-store.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main/styles-store.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/main/styles.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main/styles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/public/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/public/header.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +92,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.StyleCodiApplication.executor": "Run",
     "Spring Boot.StyleSnapApplication.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
@@ -67,7 +102,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.editor",
@@ -83,19 +118,21 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\idodo\Documents\Study1\2024.12.22_StyleSnap_SpringBoot-master\src\main\resources\static\css\main" />
       <recent name="C:\Users\idodo\Documents\Study1\2024.12.22_StyleSnap_SpringBoot-master\src\main\resources\static\js\main" />
+      <recent name="C:\Users\idodo\Documents\Study1\2024.12.22_StyleSnap_SpringBoot-master\src\main\resources\mybatis" />
       <recent name="C:\Users\idodo\Documents\Study1\2024.12.22_StyleSnap_SpringBoot-master\src\main\resources\templates\main" />
       <recent name="C:\Users\idodo\Documents\Study1\2024.12.22_StyleSnap_SpringBoot-master\src\main\resources\static\css\user" />
-      <recent name="C:\Users\idodo\Documents\Study1\2024.12.22_StyleSnap_SpringBoot-master\src\main\resources\static\js\user" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ido.style.dto" />
+      <recent name="ido.style.mapper" />
+      <recent name="ido.style.service" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="StyleSnapApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="StyleCodiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="Style" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ido.style.StyleSnapApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ido.style.StyleCodiApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -123,7 +160,9 @@
       <workItem from="1735798915078" duration="1719000" />
       <workItem from="1735814491061" duration="25000" />
       <workItem from="1735817899068" duration="28113000" />
-      <workItem from="1735901838238" duration="7440000" />
+      <workItem from="1735901838238" duration="8275000" />
+      <workItem from="1736054443374" duration="5099000" />
+      <workItem from="1736324484850" duration="18474000" />
     </task>
     <servers />
   </component>

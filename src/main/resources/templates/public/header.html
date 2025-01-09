@@ -2,7 +2,6 @@
 <html lang="ko"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
 >
 <head>
     <meta charset="UTF-8">
@@ -16,6 +15,14 @@
         </a>
 
         <ul class="main-menu-ul">
+            <li th:each="styleCategory: ${styleCategories}">
+                <a th:href="@{|/styleProduct?categoryNo=${styleCategory.no}|}" th:text="${styleCategory.name}">ALL</a>
+                <ul class="header-child-menu" th:if="${styleCategory.children}">
+                    <li th:each="childCategory: ${styleCategory.children}">
+                        <a th:href="@{|/styleProduct?categoryNo=${childCategory.no}|}" th:text="${childCategory.name}">ALL</a>
+                    </li>
+                </ul>
+            </li>
             <li th:each="category: ${categories}">
                 <a th:href="@{|/product?categoryNo=${category.no}|}" th:text="${category.name}">ALL</a>
                 <ul class="header-child-menu" th:if="${category.children}">

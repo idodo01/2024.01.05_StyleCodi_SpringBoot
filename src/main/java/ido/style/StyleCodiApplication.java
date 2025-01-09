@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class StyleSnapApplication {
+public class StyleCodiApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(StyleSnapApplication.class, args);
+        SpringApplication.run(StyleCodiApplication.class, args);
     }
 
 }

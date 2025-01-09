@@ -7,61 +7,63 @@
 >
 <head>
     <meta charset="UTF-8">
-    <title>카테고리 | KOREA STORE</title>
+    <title>STYLECODI</title>
     <link rel="stylesheet" href="../../static/css/main/styles-store.css">
 </head>
 <body>
 
 <main layout:fragment="main">
-    <h1>StyleSnap</h1>
-    <div class="button-container">
-        <a href="/styles"><div class="tab" id="order-select-button">시작하기</div ></a>
-        <a href="/styles-store"><div class="tab" id="order-all-button">스토어 상품으로</div></a>
-        <a href="/styles-my"><div class="tab" id="">내 옷장으로</div></a>
-    </div>
-    <hr>
+    <section class="styles-store-section">
+        <h1>StyleSnap</h1>
+        <div class="button-container">
+            <a href="/styles"><div class="tab" id="order-select-button">시작하기</div ></a>
+            <a href="/styles-map"><div class="tab" id="">스타일 맵 만들기</div></a>
+            <a href="/styles-store"><div class="tab" id="order-all-button">스토어 상품으로</div></a>
+        </div>
+        <hr>
 
-    <header>
-        <div>
-            <span>등록상품:</span>
-            <b>13건</b>
-        </div>
-        <ul class="style-main-menu">
-            <li th:each="category: ${categories}">
-                <a th:href="@{|/styles-store?categoryNo=${category.no}|}" th:text="${category.name}">ALL</a>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <a href="/product?sort=recent">최신순</a>
-            </li>
-            <li>
-                <a href="/product?sort=name">이름순</a>
-            </li>
-            <li>
-                <a href="/product?sort=low-price">낮은 가격순</a>
-            </li>
-            <li>
-                <a href="/product?sort=high-price">높은 가격순</a>
-            </li>
-        </ul>
-    </header>
-    <section>
-        <div class="item" th:each="product: ${products}">
-            <a class="image-container" th:href="@{|/product/${product.no}|}">
-                <img th:src="@{|/image/${product.images[0].no}|}" src="https://jp.cookierunstore.com/web/product/medium/202312/27a96ac44b5d30888302cb8673663719.jpg" alt="">
-            </a>
-            <b class="title" th:text="${product.name}">クッキーラン霊魂石キーホルダー第4弾</b>
-            <b class="price" th:text="${product.price}">1,192원</b>
-        </div>
+        <header>
+            <div>
+                <span>등록상품:</span>
+                <b>13건</b>
+            </div>
+            <ul class="style-main-menu">
+                <li th:each="category: ${categories}">
+                    <a th:href="@{|/styles-store?categoryNo=${category.no}|}" th:text="${category.name}">ALL</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="/styles-store?sort=recent">최신순</a>
+                </li>
+                <li>
+                    <a href="/styles-store?sort=name">이름순</a>
+                </li>
+                <li>
+                    <a href="/styles-store?sort=low-price">낮은 가격순</a>
+                </li>
+                <li>
+                    <a href="/styles-store?sort=high-price">높은 가격순</a>
+                </li>
+            </ul>
+        </header>
+        <section>
+            <div class="item" th:each="product: ${products}">
+                <a class="image-container" th:href="@{|/product/${product.no}|}">
+                    <img th:src="@{|/image/${product.images[0].no}|}" src="https://jp.cookierunstore.com/web/product/medium/202312/27a96ac44b5d30888302cb8673663719.jpg" alt="">
+                </a>
+                <b class="title" th:text="${product.name}">クッキーラン霊魂石キーホルダー第4弾</b>
+                <b class="price" th:text="${product.price}">1,192원</b>
+            </div>
+        </section>
+        <ol>
+            <li><a href="#"><i class="bi bi-caret-left-fill"></i></a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#"><i class="bi bi-caret-right-fill"></i></a></li>
+        </ol>
     </section>
-    <ol>
-        <li><a href="#"><i class="bi bi-caret-left-fill"></i></a></li>
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#"><i class="bi bi-caret-right-fill"></i></a></li>
-    </ol>
 </main>
 </body>
 </html>
