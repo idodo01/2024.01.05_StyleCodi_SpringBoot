@@ -1,6 +1,8 @@
 package ido.style.controller;
 
 import ido.style.dto.CartDTO;
+import ido.style.dto.ProductDTO;
+import ido.style.dto.StyleProductDTO;
 import ido.style.dto.UserDTO;
 import ido.style.service.OrderService;
 import ido.style.service.PortOneService;
@@ -93,6 +95,16 @@ public class UserController {
 //        List<OrderDTO> orders = orderService.get_orders_by_user(user.getId());
 ////        log.info("조회된 ORDER: " + orders);
 //        model.addAttribute("orders", orders);
+    }
+
+    /******************************************************************/
+    @GetMapping("/upload")
+    public void get_style_upload(){}
+
+    @PostMapping("/upload")
+    public String post_style_upload(StyleProductDTO styleProductDTO){
+        userService.add_style_product(styleProductDTO);
+        return "redirect:/user/upload";
     }
 
 }

@@ -7,7 +7,6 @@
     <resultMap id="styleProductWithImageMap" type="StyleProductDTO" autoMapping="true">
         <id property="no" column="product_no" />
         <result property="name" column="product_name" />
-        <result property="price" column="product_price" />
 
         <association property="category" javaType="StyleCategoryDTO" autoMapping="true">
             <id property="no" column="category_no" />
@@ -23,7 +22,6 @@
         SELECT
         P.`no` AS product_no,
         P.`name` AS product_name,
-        P.`price` AS product_price,
         P.detail,
         P.uploaded_at,
 
@@ -51,12 +49,6 @@
             <when test="sort == 'name'">
                 ORDER BY P.`name`
             </when>
-            <when test="sort == 'low-price'">
-                ORDER BY P.`price`
-            </when>
-            <when test="sort == 'high-price'">
-                ORDER BY P.`price` DESC
-            </when>
             <otherwise>
                 ORDER BY P.`uploaded_at`
             </otherwise>
@@ -68,7 +60,6 @@
             *,
             P.`no` AS product_no,
             P.`name` AS product_name,
-            P.`price` AS product_price,
 
             CT.no AS category_no,
             CT.name AS category_name,

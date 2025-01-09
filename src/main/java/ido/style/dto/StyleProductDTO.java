@@ -13,11 +13,10 @@ import java.util.List;
 public class StyleProductDTO {
     private Integer no;
     private String name;
-    private Integer price;
     private String detail;
     private LocalDateTime uploadedAt;
-    private CategoryDTO category;
-    private List<ProductImageDTO> images;
+    private StyleCategoryDTO category;
+    private List<StyleProductImageDTO> images;
 
 }
 

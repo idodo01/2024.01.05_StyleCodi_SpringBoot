@@ -16,11 +16,11 @@ public class StyleProductService {
     @Autowired
     private StyleProductMapper styleProductMapper;
 
-    public List<StyleProductDTO> get_products(Integer categoryNo, String sort){
+    public List<StyleProductDTO> get_style_products(Integer categoryNo, String sort){
         return styleProductMapper.selectStyleProducts(categoryNo, sort);
     }
 
-    public StyleProductDTO get_product(Integer productNo){
+    public StyleProductDTO get_style_product(Integer productNo){
         return styleProductMapper.selectStyleProductByNo(productNo);
     }
 

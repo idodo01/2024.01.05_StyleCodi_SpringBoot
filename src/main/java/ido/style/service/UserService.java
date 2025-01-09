@@ -1,5 +1,6 @@
 package ido.style.service;
 
+import ido.style.dto.StyleProductDTO;
 import ido.style.dto.UserDTO;
 import ido.style.mapper.UserMapper;
 import lombok.extern.log4j.Log4j2;
@@ -29,5 +30,14 @@ public class UserService {
         userMapper.insertUser(userDTO);
         log.info("가입 유저가 등록되었다!");
         return true; // 가입 성공 판단
+    }
+
+    // 상품과 해당 상품의 옵션들을 DB에 INSERT
+    public void add_style_product(StyleProductDTO styleProduct){
+        // 상품을 전달해서 DB에 상품의 정보를 추가하기!
+        userMapper.insertStyleProduct(styleProduct);
+
+        userMapper.insertStyleProductImages(styleProduct);
+
     }
 }

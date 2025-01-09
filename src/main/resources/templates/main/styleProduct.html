@@ -15,50 +15,25 @@
 <body>
 <main layout:fragment="main">
     <section class="product-section">
-        <nav id="category-nav">
-            <ol>
-                <li th:each="category: ${categoryMap}">
-                    <a th:href="@{/product(categoryNo=${category.no})}" th:text="${category.name}">CATEGORY1</a>
-                </li>
-            </ol>
-        </nav>
-
         <article>
             <section>
                 <div class="main-image-container">
-                    <img th:src="@{|/image/${product.images[0].no}|}" alt="메인이미지">
+                    <img th:src="@{|/image/${styleProduct.images[0].no}|}" alt="메인이미지">
                 </div>
                 <div class="sub-image-container">
-                    <button th:each="image,stat: ${product.images}" th:unless="${stat.first}">
+                    <button th:each="image,stat: ${styleProduct.images}" th:unless="${stat.first}">
                         <img th:src="@{|/image/${image.no}|}" alt="메인이미지">
                     </button>
                 </div>
             </section>
 
-            <form th:action="@{/user/order}" method="post" th:id="${product.no}" name="product">
+            <form th:action="@{/user/order}" method="post" th:id="${styleProduct.no}" name="product">
                 <header>
                     <div>
                         <b>상품명</b>
-                        <h3 th:text="${product.name}">クッキーランミニシールセット3種：第2弾</h3>
-                    </div>
-                    <div>
-                        <b>상품가격</b>
-                        <span th:text="${#numbers.formatCurrency(product.price)}">999,999원</span>
+                        <h3 th:text="${styleProduct.name}">상품명</h3>
                     </div>
                 </header>
-
-
-                <div class="total-container">
-                    <span>TOTAL:</span>
-                    <b th:text="${#numbers.formatCurrency(product.price)}">1,000,000원</b>
-                    <span>(총 1개)</span>
-                </div>
-
-                <button type="submit" class="buy-btn">바로 구입</button>
-                <div class="button-container">
-                    <button type="button" class="cart-btn">카트에 담기</button>
-                    <button type="button" class="heart-btn">찜하기</button>
-                </div>
             </form>
         </article>
 
@@ -87,9 +62,9 @@
 
         <section id="product-info-section">
             <div class="prouduct-img-container">
-                <img th:each="image: ${product.images}" th:src="@{|/image/${image.no}|}" alt="상세사진">
+                <img th:each="image: ${styleProduct.images}" th:src="@{|/image/${image.no}|}" alt="상세사진">
             </div>
-            <p th:utext="${product.detail}">
+            <p th:utext="${styleProduct.detail}">
                 상품 디테일이 적힌 공간입니다~~
             </p>
         </section>

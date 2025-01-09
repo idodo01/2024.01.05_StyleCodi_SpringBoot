@@ -1,4 +1,4 @@
-// styles-my.js
+// styles-map.js
 
 // 이미지 업로드와 결과 표시 요소 가져오기
 const topInput = document.getElementById("topInput");

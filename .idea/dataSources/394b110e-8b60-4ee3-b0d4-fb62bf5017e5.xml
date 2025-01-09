@@ -1237,7 +1237,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="341" parent="305" name="no">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>3</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
@@ -1247,142 +1247,137 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Position>2</Position>
       <StoredType>varchar(45)|0s</StoredType>
     </column>
-    <column id="343" parent="305" name="price">
-      <NotNull>1</NotNull>
+    <column id="343" parent="305" name="detail">
       <Position>3</Position>
-      <StoredType>int unsigned|0s</StoredType>
-    </column>
-    <column id="344" parent="305" name="detail">
-      <Position>4</Position>
       <StoredType>longtext|0s</StoredType>
     </column>
-    <column id="345" parent="305" name="uploaded_at">
+    <column id="344" parent="305" name="uploaded_at">
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <NotNull>1</NotNull>
-      <Position>5</Position>
+      <Position>4</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <column id="346" parent="305" name="category">
+    <column id="345" parent="305" name="category">
       <NotNull>1</NotNull>
-      <Position>6</Position>
+      <Position>5</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <index id="347" parent="305" name="PRIMARY">
+    <index id="346" parent="305" name="PRIMARY">
       <ColNames>no</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="348" parent="305" name="PRIMARY">
+    <key id="347" parent="305" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="349" parent="306" name="no">
+    <column id="348" parent="306" name="no">
       <AutoIncrement>9</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="350" parent="306" name="product_no">
+    <column id="349" parent="306" name="product_no">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="351" parent="306" name="orginal_filename">
+    <column id="350" parent="306" name="orginal_filename">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="352" parent="306" name="data">
+    <column id="351" parent="306" name="data">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>longblob|0s</StoredType>
     </column>
-    <index id="353" parent="306" name="PRIMARY">
+    <index id="352" parent="306" name="PRIMARY">
       <ColNames>no</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="354" parent="306" name="PRIMARY">
+    <key id="353" parent="306" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="355" parent="307" name="id">
+    <column id="354" parent="307" name="id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>char(15)|0s</StoredType>
     </column>
-    <column id="356" parent="307" name="password">
+    <column id="355" parent="307" name="password">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>char(60)|0s</StoredType>
     </column>
-    <column id="357" parent="307" name="ci">
+    <column id="356" parent="307" name="ci">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="358" parent="307" name="tel">
+    <column id="357" parent="307" name="tel">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>char(13)|0s</StoredType>
     </column>
-    <column id="359" parent="307" name="email">
+    <column id="358" parent="307" name="email">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="360" parent="307" name="nickname">
+    <column id="359" parent="307" name="nickname">
       <Position>6</Position>
       <StoredType>varchar(20)|0s</StoredType>
     </column>
-    <column id="361" parent="307" name="profile_image">
+    <column id="360" parent="307" name="profile_image">
       <Position>7</Position>
       <StoredType>longblob|0s</StoredType>
     </column>
-    <index id="362" parent="307" name="PRIMARY">
+    <index id="361" parent="307" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="363" parent="307" name="ci_UNIQUE">
+    <index id="362" parent="307" name="ci_UNIQUE">
       <ColNames>ci</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="364" parent="307" name="email_UNIQUE">
+    <index id="363" parent="307" name="email_UNIQUE">
       <ColNames>email</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="365" parent="307" name="PRIMARY">
+    <key id="364" parent="307" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="366" parent="307" name="ci_UNIQUE">
+    <key id="365" parent="307" name="ci_UNIQUE">
       <UnderlyingIndexName>ci_UNIQUE</UnderlyingIndexName>
     </key>
-    <key id="367" parent="307" name="email_UNIQUE">
+    <key id="366" parent="307" name="email_UNIQUE">
       <UnderlyingIndexName>email_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="368" parent="308" name="product_no">
+    <column id="367" parent="308" name="product_no">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="369" parent="308" name="product_name">
+    <column id="368" parent="308" name="product_name">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(45)|0s</StoredType>
     </column>
-    <column id="370" parent="308" name="product_price">
+    <column id="369" parent="308" name="product_price">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int unsigned|0s</StoredType>
     </column>
-    <column id="371" parent="308" name="product_image_no">
+    <column id="370" parent="308" name="product_image_no">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>int|0s</StoredType>

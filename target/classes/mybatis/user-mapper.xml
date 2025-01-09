@@ -12,4 +12,18 @@
         INSERT INTO `user` (id, password, tel, email, nickname, profile_image) 
         VALUES (#{id}, #{password}, #{tel}, #{email}, #{nickname}, NULL)
     </insert>
+
+    <insert id="insertStyleProduct">
+        INSERT INTO style_product VALUES (NULL, #{name}, #{detail}, DEFAULT, 1)
+    </insert>
+
+    <insert id="insertStyleProductImages">
+        <selectKey keyProperty="no" resultType="int" order="BEFORE">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        INSERT INTO `style_product_image` VALUES
+        <foreach collection="images" item="image" separator=",">
+            (NULL, #{no}, #{image.fileName}, #{image.data})
+        </foreach>
+    </insert>
 </mapper>

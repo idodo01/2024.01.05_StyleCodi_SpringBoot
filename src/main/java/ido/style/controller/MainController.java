@@ -33,14 +33,14 @@ public class MainController {
         return "main/home"; // 홈페이지로 가라
     }
 
-    // 해당 카테고리의 스타일 상품 리스트 화면
+    // 스타일 상품 리스트 화면
     @GetMapping("/styleProduct")
     public String get_stylecateogry(
             @RequestParam(defaultValue = "1") Integer categoryNo,
             String sort,
             Model model
     ){
-        List<StyleProductDTO> styleProducts = styleProductService.get_products(categoryNo, sort);
+        List<StyleProductDTO> styleProducts = styleProductService.get_style_products(categoryNo, sort);
 
         List<StyleCategoryDTO> styleCategories = styleProductService.get_categories();
         List<CategoryDTO> categories = productService.get_categories();
@@ -51,7 +51,27 @@ public class MainController {
 
         return "main/styleCategory";
     }
-    // 해당 카테고리의 모든 상품 리스트 화면
+
+    // 스타일 상품 하나의 화면
+    @GetMapping("/styleProduct/{productNo}")
+    public String get_styleProduct(
+            @PathVariable Integer productNo,
+            Model model
+    ) {
+        StyleProductDTO styleProduct = styleProductService.get_style_product(productNo);
+
+        List<CategoryDTO> categories = productService.get_categories();
+        List<StyleCategoryDTO> styleCategories = styleProductService.get_categories();
+
+        model.addAttribute("styleProduct", styleProduct);
+        model.addAttribute("categories", categories);
+        model.addAttribute("styleCategories", styleCategories);
+
+        return "main/styleProduct";
+    }
+
+
+    // 모든 상품 리스트 화면
     @GetMapping("/product")
     public String get_cateogry(
             @RequestParam(defaultValue = "1") Integer categoryNo,
@@ -72,24 +92,6 @@ public class MainController {
         return "main/category";
     }
 
-    // 스타일 상품 하나의 화면
-    @GetMapping("/styleProduct/{productNo}")
-    public String get_styleProduct(
-            @PathVariable Integer productNo,
-            Model model
-    ) {
-        StyleProductDTO styleProduct = styleProductService.get_product(productNo);
-
-        List<StyleCategoryDTO> styleCategories = styleProductService.get_categories();
-        List<CategoryDTO> categories = productService.get_categories();
-
-        model.addAttribute("product", styleProduct);
-
-        model.addAttribute("styleCategories", styleCategories);
-        model.addAttribute("categories", categories);
-
-        return "main/styleProduct";
-    }
 
     // 상품 하나의 화면
     @GetMapping("/product/{productNo}")
@@ -109,6 +111,7 @@ public class MainController {
         return "main/product";
     }
 
+    /****************************************************************************/
     // 스타일 스냅
     @GetMapping("/styles")
     public String get_styles(
@@ -127,7 +130,7 @@ public class MainController {
 
     // 스타일 스냅 - 스타일 맵 만들기
     @GetMapping("/styles-map")
-    public String get_styles_my(
+    public String get_styles_map(
             @RequestParam(defaultValue = "1") Integer categoryNo,
             String sort,
             Model model
@@ -139,6 +142,22 @@ public class MainController {
         model.addAttribute("categories", categories);
         model.addAttribute("styleCategories", styleCategories);
         return "main/styles-map";
+    }
+
+    // 스타일 스냅 - 스타일 맵 만들기
+    @GetMapping("/styles-map2")
+    public String get_styles_map2(
+            @RequestParam(defaultValue = "1") Integer categoryNo,
+            String sort,
+            Model model
+    ){
+        List<ProductDTO> products = productService.get_products(categoryNo, sort);
+        List<CategoryDTO> categories = productService.get_categories();
+        List<StyleCategoryDTO> styleCategories = styleProductService.get_categories();
+        model.addAttribute("products", products);
+        model.addAttribute("categories", categories);
+        model.addAttribute("styleCategories", styleCategories);
+        return "main/styles-map2";
     }
 
     // 스타일 스냅 - 스토어
