@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layout/main-layout}"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>STYLECODI</title>
+    <link rel="stylesheet" href="../../static/css/main/style-store.css">
+    <script src="../../static/js/main/style-store.js" defer></script>
+</head>
+<body>
+
+<main layout:fragment="main">
+    <section class="style-all-section">
+        <h1>StyleSnap</h1>
+        <div class="button-container">
+            <a href="/style"><div class="tab" id="order-select-button">시작하기</div ></a>
+            <a href="/style-store"><div class="tab" id="order-all-button">스토어 상품으로</div></a>
+        </div>
+        <hr>
+        <section class="style-body-section">
+            <section class="style-map-section">
+                <div class="container">
+                    <div class="box top empty" id="top" onclick="uploadImage('top')">
+                        <img src="../../static/images/example/top.jpg" alt="상의">
+                        <input type="file" accept="image/*" id="input-top" onchange="previewImage(event, 'top')" style="display: none;">
+                    </div>
+                    <div class="box outer empty" id="outer" onclick="uploadImage('outer')">
+                        <img src="../../static/images/example/outer.jpg" alt="겉옷">
+                        <input type="file" accept="image/*" id="input-outer" onchange="previewImage(event, 'outer')" style="display: none;">
+                    </div>
+                    <div class="box bottom empty" id="bottom" onclick="uploadImage('bottom')">
+                        <img src="../../static/images/example/bottom.jpg" alt="하의">
+                        <input type="file" accept="image/*" id="input-bottom" onchange="previewImage(event, 'bottom')" style="display: none;">
+                    </div>
+                    <div class="box shoes empty" id="shoes" onclick="uploadImage('shoes')">
+                        <img src="../../static/images/example/shose.jpg" alt="신발">
+                        <input type="file" accept="image/*" id="input-shoes" onchange="previewImage(event, 'shoes')" style="display: none;">
+                    </div>
+                    <div class="box bag empty" id="bag" onclick="uploadImage('bag')">
+                        <img src="../../static/images/example/bag.jpg" alt="가방">
+                        <input type="file" accept="image/*" id="input-bag" onchange="previewImage(event, 'bag')" style="display: none;">
+                    </div>
+                </div>
+
+                <button class="combine-btn" onclick="combineImages()">조합하기</button>
+
+                <canvas id="canvas" width="400" height="600" style="display: none;"></canvas>
+            </section>
+
+
+            <section class="style-store-section">
+
+                <ul class="style-main-menu">
+                    <li th:each="styleStoreCategory: ${styleStoreCategories}">
+                        <a th:href="@{|/styles-store?categoryNo=${styleStoreCategory.no}|}" th:text="${styleStoreCategory.name}">ALL</a>
+                    </li>
+
+                </ul>
+
+                <ul>
+                    <li>
+                        <a th:href="@{|/styles-store?categoryNo=${categoryNo}&sort=recent|}">최신순</a>
+                    </li>
+                    <li>
+                        <a th:href="@{|/styles-store?categoryNo=${categoryNo}&sort=name|}">이름순</a>
+                    </li>
+                    <li>
+                        <a th:href="@{|/styles-store?categoryNo=${categoryNo}&sort=low-price|}">낮은 가격순</a>
+                    </li>
+                    <li>
+                        <a th:href="@{|/styles-store?categoryNo=${categoryNo}&sort=high-price|}">높은 가격순</a>
+                    </li>
+                </ul>
+
+                <section class="style-store-item-section">
+                    <div class="item" th:each="product: ${products}">
+                        <button class="image-container">
+                        <img th:src="@{|/image/${product.images[0].no}|}" src="https://jp.cookierunstore.com/web/product/medium/202312/27a96ac44b5d30888302cb8673663719.jpg" alt="">
+                        </button>
+                        <b class="title" th:text="${product.name}">상품명</b>
+                        <b class="price" th:text="${product.price}">9,999원</b>
+                        <a th:href="@{|/product/${product.no}|}">상세보기</a>
+                    </div>
+                </section>
+                <ol>
+                    <li><a href="#"><i class="bi bi-caret-left-fill"></i></a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#"><i class="bi bi-caret-right-fill"></i></a></li>
+                </ol>
+            </section>
+        </section>
+    </section>
+</main>
+</body>
+</html>

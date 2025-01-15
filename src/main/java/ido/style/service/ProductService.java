@@ -2,6 +2,7 @@ package ido.style.service;
 
 import ido.style.dto.CategoryDTO;
 import ido.style.dto.ProductDTO;
+import ido.style.dto.StyleStoreCategoryDTO;
 import ido.style.mapper.ProductMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,4 +28,9 @@ public class ProductService {
         return productMapper.selectCategories();
     }
 
+//    스타일 스토어 상품, 카테고리
+
+    public List<StyleStoreCategoryDTO> get_style_store_categories(){
+        return productMapper.selectStyleStoreCategories();
+    }
 }

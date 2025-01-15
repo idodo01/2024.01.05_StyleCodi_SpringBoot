@@ -1,12 +1,19 @@
 @import "../public/public.css";
 
-.styles-section {
+
+.style-all-section {
     width: 1400px;
     margin: 180px auto;
 }
-.styles-section > h1{
+.style-all-section > h1{
     margin: 40px;
     text-align: center;
+}
+
+.style-body-section {
+    margin-top: 30px;
+    justify-content: center;
+    display: flex;
 }
 
 /******************************************/
@@ -37,12 +44,11 @@
     background-color: var(--Summer-spring-decoration-design-elements-2-rgba);
 }
 
-
 .tab {
     padding: 10px 20px;
     margin: 0 10px;
     cursor: pointer;
-    background-color: #ffeb3b;
+    background-color: pink;
     border-radius: 20px;
     font-weight: bold;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -51,10 +57,3 @@
 .tab:hover {
     transform: scale(0.8);
 }
-.tab.active {
-    background-color: #ffc107;
-    color: #fff;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-}
-
-

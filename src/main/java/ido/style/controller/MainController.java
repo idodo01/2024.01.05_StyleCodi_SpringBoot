@@ -1,9 +1,6 @@
 package ido.style.controller;
 
-import ido.style.dto.CategoryDTO;
-import ido.style.dto.ProductDTO;
-import ido.style.dto.StyleCategoryDTO;
-import ido.style.dto.StyleProductDTO;
+import ido.style.dto.*;
 import ido.style.service.ProductService;
 import ido.style.service.StyleProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -112,8 +109,8 @@ public class MainController {
     }
 
     /****************************************************************************/
-    // 스타일 스냅
-    @GetMapping("/styles")
+    // 스타일 코디
+    @GetMapping("/style")
     public String get_styles(
             @RequestParam(defaultValue = "1") Integer categoryNo,
             String sort,
@@ -127,53 +124,32 @@ public class MainController {
         model.addAttribute("styleCategories", styleCategories);
         return "main/styles";
     }
-
-    // 스타일 스냅 - 스타일 맵 만들기
-    @GetMapping("/styles-map")
-    public String get_styles_map(
-            @RequestParam(defaultValue = "1") Integer categoryNo,
-            String sort,
-            Model model
-    ){
-        List<ProductDTO> products = productService.get_products(categoryNo, sort);
-        List<CategoryDTO> categories = productService.get_categories();
-        List<StyleCategoryDTO> styleCategories = styleProductService.get_categories();
-        model.addAttribute("products", products);
-        model.addAttribute("categories", categories);
-        model.addAttribute("styleCategories", styleCategories);
-        return "main/styles-map";
-    }
-
-    // 스타일 스냅 - 스타일 맵 만들기
-    @GetMapping("/styles-map2")
-    public String get_styles_map2(
-            @RequestParam(defaultValue = "1") Integer categoryNo,
-            String sort,
-            Model model
-    ){
-        List<ProductDTO> products = productService.get_products(categoryNo, sort);
-        List<CategoryDTO> categories = productService.get_categories();
-        List<StyleCategoryDTO> styleCategories = styleProductService.get_categories();
-        model.addAttribute("products", products);
-        model.addAttribute("categories", categories);
-        model.addAttribute("styleCategories", styleCategories);
-        return "main/styles-map2";
-    }
-
-    // 스타일 스냅 - 스토어
-    @GetMapping("/styles-store")
+    
+    // 스타일 코디 - 스토어
+    @GetMapping("/style-store")
     public String get_styles_store(
             @RequestParam(defaultValue = "1") Integer categoryNo,
             String sort,
             Model model
     ){
+
+
+        model.addAttribute("categoryNo", categoryNo);
+
+
+
         List<ProductDTO> products = productService.get_products(categoryNo, sort);
         List<CategoryDTO> categories = productService.get_categories();
         List<StyleCategoryDTO> styleCategories = styleProductService.get_categories();
+
+        List<StyleStoreCategoryDTO> styleStoreCategories = productService.get_style_store_categories();
+
         model.addAttribute("products", products);
         model.addAttribute("categories", categories);
         model.addAttribute("styleCategories", styleCategories);
-        return "main/styles-store";
+
+        model.addAttribute("styleStoreCategories", styleStoreCategories);
+        return "main/style-store";
     }
 
 

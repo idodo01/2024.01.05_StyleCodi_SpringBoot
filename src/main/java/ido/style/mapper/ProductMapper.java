@@ -3,7 +3,9 @@ package ido.style.mapper;
 
 import ido.style.dto.CategoryDTO;
 import ido.style.dto.ProductDTO;
+import ido.style.dto.StyleStoreCategoryDTO;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
@@ -19,9 +21,10 @@ public interface ProductMapper {
     List<CategoryDTO> selectCategories();
 
 
+//    스타일 스토어 상품, 카테고리
 
-
-
+    @Select("SELECT * FROM style_store_category")
+    List<StyleStoreCategoryDTO> selectStyleStoreCategories();
 }
 
     

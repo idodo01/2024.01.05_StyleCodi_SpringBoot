@@ -69,7 +69,7 @@ public class UserController {
 
     @PostMapping("/join")
     public String post_join(
-            @ModelAttribute @Validated UserDTO userDTO,
+            @ModelAttribute UserDTO userDTO,
             BindingResult bindingResult,
             HttpSession session
     ) {
@@ -78,8 +78,6 @@ public class UserController {
             log.error(bindingResult.getAllErrors());
             return "user/join";
         }
-
-        userDTO.setCi("TEST_CI2");
 
         boolean joinResult = userService.join_user(userDTO);
         // 가입 성공이면 login 화면으로, 실패라면 회원가입 화면으로.

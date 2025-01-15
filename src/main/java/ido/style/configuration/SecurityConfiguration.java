@@ -28,7 +28,7 @@ public class SecurityConfiguration {
             configure.requestMatchers("/image/*","/tel/auth", "/email/auth").permitAll();
             configure.requestMatchers("/user/join").permitAll();
             configure.requestMatchers("/product/*","/product/**").permitAll();
-            configure.requestMatchers("/styles").permitAll();
+            configure.requestMatchers("/style").permitAll();
             configure.anyRequest().permitAll();
         });
 

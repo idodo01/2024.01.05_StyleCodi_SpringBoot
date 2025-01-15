@@ -5,21 +5,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d6978e8-a239-4e31-a9d3-edbc62bc5338" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ido/style/dto/StyleStoreCategoryDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/main/style-store.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/main/style-store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/main/style-store.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/394b110e-8b60-4ee3-b0d4-fb62bf5017e5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/394b110e-8b60-4ee3-b0d4-fb62bf5017e5.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ido/style/configuration/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ido/style/configuration/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ido/style/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ido/style/controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ido/style/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ido/style/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ido/style/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ido/style/dto/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ido/style/mapper/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ido/style/mapper/ProductMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ido/style/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ido/style/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/product-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/product-mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/user-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/user-mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main/styles-map.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main/styles-map2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main/styles-store.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/main/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/user/join.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/user/join.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/user/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/user/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/user/upload.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/user/upload.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main/category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main/styleCategory.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main/styleCategory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/logo/header_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/logo/header_logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/main/styles-map.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/main/styles-map2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/user/join.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/user/join.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main/styles-map.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main/styles-map2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main/styles-store.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main/styles.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main/styles.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/join.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/join.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/upload.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ido/style/configuration/SecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ido/style/configuration/SecurityConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ido/style/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ido/style/controller/MainController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ido/style/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ido/style/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/user/upload.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/user/upload.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/main/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main/category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/main/styleCategory.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main/styleCategory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/user/upload.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ido/style/dto/UserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ido/style/dto/UserDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ido/style/mapper/ProductMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ido/style/mapper/ProductMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ido/style/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ido/style/service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/product-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/product-mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/user-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/user-mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/main/styles-map.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/main/styles-map2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/main/styles-store.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/user/join.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/user/join.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/logo/header_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/images/logo/header_logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/main/styles-map.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/main/styles-map2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/user/join.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/user/join.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main/styles-map.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main/styles-map2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main/styles-store.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main/styles.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main/styles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/user/join.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/user/join.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +102,7 @@
     "Spring Boot.StyleSnapApplication.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/idodo/Documents/Study1/2024.12.22_StyleSnap_SpringBoot-master/src/main/resources/static/css/user",
+    "last_opened_file_path": "C:/Users/idodo/Documents/Study/Cookie Run Store_12월 30일까지",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -88,16 +122,16 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\idodo\Documents\Study1\2024.12.22_StyleSnap_SpringBoot-master\src\main\resources\static\js\main" />
       <recent name="C:\Users\idodo\Documents\Study1\2024.12.22_StyleSnap_SpringBoot-master\src\main\resources\static\css\user" />
       <recent name="C:\Users\idodo\Documents\Study1\2024.12.22_StyleSnap_SpringBoot-master\src\main\resources\static\js\user" />
       <recent name="C:\Users\idodo\Documents\Study1\2024.12.22_StyleSnap_SpringBoot-master\src\main\resources\templates\user" />
-      <recent name="C:\Users\idodo\Documents\Study1\2024.12.22_StyleSnap_SpringBoot-master\src\main\resources\static\js\main" />
       <recent name="C:\Users\idodo\Documents\Study1\2024.12.22_StyleSnap_SpringBoot-master\src\main\resources\static\css\main" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ido.style.dto" />
       <recent name="ido.style.interceptor" />
       <recent name="ido.style.converter" />
-      <recent name="ido.style.dto" />
       <recent name="ido.style.mapper" />
       <recent name="ido.style.controller" />
     </key>
@@ -137,6 +171,8 @@
       <workItem from="1735901838238" duration="8275000" />
       <workItem from="1736054443374" duration="5099000" />
       <workItem from="1736324484850" duration="32036000" />
+      <workItem from="1736763611635" duration="11453000" />
+      <workItem from="1736918106744" duration="15956000" />
     </task>
     <servers />
   </component>

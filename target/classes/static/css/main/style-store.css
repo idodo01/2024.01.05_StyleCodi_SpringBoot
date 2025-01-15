@@ -1,0 +1,238 @@
+@import "../public/public.css";
+
+
+.style-all-section {
+    width: 1400px;
+    margin: 180px auto;
+}
+.style-all-section > h1{
+    margin: 40px;
+    text-align: center;
+}
+
+.style-body-section {
+    display: flex;
+}
+
+/******************************************/
+/**************** 스타일 맵 세션 *******************/
+/******************************************/
+
+.style-map-section{
+    margin-top: 30px;
+    border: 5px solid pink;
+    border-radius: 8px;
+    padding: 15px;
+    height: 100%;
+}
+.style-map-section > h1{
+    margin: 40px;
+    text-align: center;
+}
+
+/******************************************/
+
+.tab {
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: pink;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+.tab:hover {
+    transform: scale(0.8);
+}
+
+/******************************************/
+
+.container {
+    width: 400px;
+    height: 600px;
+    display: grid;
+    grid-template-rows: 2fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    background-color: #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.box {
+    background-color: #4682B4;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.box img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.top { grid-column: 1 / 2; grid-row: 1 / 2; }
+.outer { grid-column: 2 / 3; grid-row: 1 / 3; }
+.bottom { grid-column: 1 / 2; grid-row: 2 / 3; }
+.shoes { grid-column: 1 / 2; grid-row: 3 / 4; }
+.bag { grid-column: 2 / 3; grid-row: 3 / 4; }
+
+.combine-btn {
+    padding: 10px 20px;
+    background-color: lightpink;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.combine-btn:hover {
+    background-color: #315a8a;
+}
+
+.box.empty {
+    background-color: #fff; /* 기본 배경을 흰색으로 설정 */
+}
+
+
+
+
+
+/******************************************/
+/**************** 스타일 스토어 세션 *******************/
+/******************************************/
+
+.style-store-section{
+    margin: 30px auto;
+    padding: 0 50px;
+}
+
+/******************************************/
+.button-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 20px; /* 상단 여백을 추가하여 버튼들이 살짝 아래로 내려오게 설정 */
+}
+
+.button-container > button{
+    margin: 0 4px;
+    font-size: var(--font-size-normal);
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+.button-container >  a{
+    text-decoration: none; /* 밑줄 없애기 */
+}
+
+.button-container > button:first-child{
+    background-color: var(--Summer-spring-decoration-design-elements-3-rgba);
+}
+.button-container > button:last-child{
+    background-color: var(--Summer-spring-decoration-design-elements-2-rgba);
+}
+
+/******************************************/
+.style-store-section{
+    width: 800px;
+    justify-content: space-between;
+    font-size: var(--font-size-x-small);
+    margin-bottom: 25px;
+    color: var(--Dark-gray-textured-background---4-rgba);
+
+    border: 5px solid pink;
+    border-radius: 8px;
+    padding: 15px;
+
+}
+.style-store-section li{
+    display: inline-block;
+    list-style: none;
+}
+.style-store-section li:not(:last-child)::after{
+    content: "|";
+    margin: 0 10px;
+}
+.style-store-section a{
+    text-decoration: none;
+    color: var(--Dark-gray-textured-background---4-rgba);
+}
+/*****************************************************/
+.style-store-item-section {
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 5px 30px;
+    grid-template-columns: repeat(4, 1fr);
+}
+.style-store-item-section .item{
+    display: inline-flex;
+    text-align: center;
+    flex-direction: column;
+
+}
+.style-store-item-section .image-container{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    &:hover > img{
+        transform: scale(120%);
+    }
+}
+.style-store-item-section .image-container > img{
+    width: 100%;
+    height: 100%;
+    transition-duration: 0.2s;
+    object-fit: contain;
+}
+.style-store-item-section .title{
+    text-decoration: none;
+    color: var(--Dark-gray-textured-background---5-rgba);
+    font-family: Medium;
+    font-size: var(--font-size-xx-small);
+    margin-bottom: 8px;
+}
+.style-store-item-section .price{
+    color: var(--Pasteles-5-rgba);
+    font-family: Medium;
+    font-size: var(--font-size-xx-small);
+}
+/******************************************************/
+.style-all-section > ol{
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+.style-all-section > ol > li {
+    margin: 0 8px;
+}
+.style-all-section > ol a{
+    color: black;
+    font-size: var(--font-size-x-small);
+}
+
+
+/*******************************************/
+
+
+
+
+
+
+
