@@ -122,10 +122,37 @@ public class MainController {
         model.addAttribute("products", products);
         model.addAttribute("categories", categories);
         model.addAttribute("styleCategories", styleCategories);
-        return "main/styles";
+        return "main/style";
     }
     
-    // 스타일 코디 - 스토어
+    // 스타일 코디
+    @GetMapping("/style-make")
+    public String get_styles_make(
+            @RequestParam(defaultValue = "1") Integer categoryNo,
+            String sort,
+            Model model
+    ){
+
+
+        model.addAttribute("categoryNo", categoryNo);
+
+
+
+        List<ProductDTO> products = productService.get_products(categoryNo, sort);
+        List<CategoryDTO> categories = productService.get_categories();
+        List<StyleCategoryDTO> styleCategories = styleProductService.get_categories();
+
+        List<StyleStoreCategoryDTO> styleStoreCategories = productService.get_style_store_categories();
+
+        model.addAttribute("products", products);
+        model.addAttribute("categories", categories);
+        model.addAttribute("styleCategories", styleCategories);
+
+        model.addAttribute("styleStoreCategories", styleStoreCategories);
+        return "main/style-make";
+    }
+
+    // 스타일 코디 - style-make 안에 사용되는 IFRAME
     @GetMapping("/style-store")
     public String get_styles_store(
             @RequestParam(defaultValue = "1") Integer categoryNo,
@@ -151,7 +178,6 @@ public class MainController {
         model.addAttribute("styleStoreCategories", styleStoreCategories);
         return "main/style-store";
     }
-
 
 
 }

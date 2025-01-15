@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.HeadersConfigurer;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -22,6 +23,11 @@ public class SecurityConfiguration {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        http.headers(config -> {
+            config.frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin);
+        });
+
+
         http.authorizeHttpRequests(configure -> {
             configure.requestMatchers("/static/**").permitAll();
             configure.requestMatchers("/").permitAll();
@@ -31,6 +37,8 @@ public class SecurityConfiguration {
             configure.requestMatchers("/style").permitAll();
             configure.anyRequest().permitAll();
         });
+
+
 
         http.formLogin(configure -> {
             configure.loginPage("/user/login")
