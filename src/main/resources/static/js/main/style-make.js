@@ -13,39 +13,16 @@ function previewImage(event, part) {
         const reader = new FileReader();
         reader.onload = function(e) {
             const box = document.getElementById(part);
-            box.innerHTML = `<img src="${e.target.result}" alt="${part}">`;
-            switch (part) {
-                case "top":
-                    box.innerHTML +=
-                        `<input type="file" accept="image/*" id="input-top" onChange="previewImage(event, 'top')"
-                               style="display: none;"/>`;
-                    break;
-                case "outer":
-                    box.innerHTML +=
-                        `<input type="file" accept="image/*" id="input-outer" onChange="previewImage(event, 'outer')"
-                               style="display: none;"/>`;
-                    break;
-                case "bottom":
-                    box.innerHTML +=
-                        `<input type="file" accept="image/*" id="input-bottom" onChange="previewImage(event, 'bottom')"
-                               style="display: none;"/>`;
-                    break;
-                case "shoes":
-                    box.innerHTML +=
-                        `<input type="file" accept="image/*" id="input-shoes" onChange="previewImage(event, 'shoes')"
-                               style="display: none;"/>`;
-                    break;
-                case "bag":
-                    box.innerHTML +=
-                        `<input type="file" accept="image/*" id="input-bag" onChange="previewImage(event, 'bag')"
-                               style="display: none;"/>`;
-                    break;
-            }
+            box.innerHTML = `<img class="${part}-img" src="${e.target.result}" alt="${part}"> 
+                            <input type="file" accept="image/*" id="input-${part}" 
+                            onChange="previewImage(event, '${part}')"
+                            style="display: none;"/>`;
             box.classList.remove('empty'); // 이미지가 첨부되면 'empty' 클래스 제거
         };
         reader.readAsDataURL(file);
     }
 }
+
 
 async function combineImages() {
     const canvas = document.getElementById("canvas");
