@@ -119,11 +119,21 @@ public class UserController {
 
     /******************************************************************/
     @GetMapping("/upload")
-    public void get_style_upload( Model model){
+    public String get_style_upload(
+            @ModelAttribute UserDTO userDTO,
+            Authentication authentication,
+            Model model
+         ){
+
+        if(!(Objects.nonNull(authentication))){
+            return "redirect:/user/login";
+        }
+
         List<StyleCategoryDTO> styleCategories = styleProductService.get_categories();
         List<CategoryDTO> categories = productService.get_categories();
         model.addAttribute("styleCategories", styleCategories);
         model.addAttribute("categories", categories);
+        return "user/upload";
     }
 
     @PostMapping("/upload")
@@ -132,7 +142,7 @@ public class UserController {
     )
     {
         userService.add_style_product(styleProductDTO);
-        return "redirect:/user/upload";
+        return "redirect:/styleProduct";
     }
 
 
